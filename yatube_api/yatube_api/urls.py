@@ -2,8 +2,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
+from api import urls as apiurls
+
 
 urlpatterns = [
+    path('api/', include(apiurls)),
     path('admin/', admin.site.urls),
 ]
 
